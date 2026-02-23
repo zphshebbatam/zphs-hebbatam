@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZPHS Hebbatam | PM SHRI School</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+.top-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+  flex-wrap:wrap;
+}
+.top-header img{
+  height:80px;
+}
+.school-info{
+  text-align:center;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#1e4fa1;
+  text-align:center;
+}
+.navbar a{
+  color:white;
+  padding:14px 18px;
+  display:inline-block;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+.navbar a:hover{
+  background:#163c7d;
+}
+
+/* HERO */
+.hero{
+  height:450px;
+  background:url("school-building.jpg.jpeg") center/cover no-repeat;
+  position:relative;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+.hero-text{
+  position:relative;
+  color:white;
+  text-align:center;
+  top:50%;
+  transform:translateY(-50%);
+}
+.hero-text h2{
+  font-size:38px;
+}
+.hero-text p{
+  font-size:18px;
+}
+
+/* SECTIONS */
+.section{
+  display:none;
+  padding:40px;
+}
+.section h2{
+  text-align:center;
+  color:#1e4fa1;
+}
+#home{
+  display:block;
+}
+
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+.gallery-tile{
+  border:2px solid #1e4fa1;
+  padding:50px;
+  text-align:center;
+  font-weight:bold;
+  border-radius:20px;
+  background:#f5f8ff;
+  cursor:pointer;
+}
+.gallery-tile:hover{
+  background:#dde7ff;
+}
+.back-btn{
+  display:inline-block;
+  margin:20px 0;
+  padding:10px 20px;
+  background:#1e4fa1;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* STAFF PAGE */
+.page-title{
+  text-align:center;
+  font-size:34px;
+  color:#1e4fa1;
+  margin-bottom:20px;
+}
+
+/* Leadership Section */
+.leadership{
+  background:#ffffff;
+  width:90%;
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+.leadership h2{
+  text-align:center;
+  font-size:28px;
+  color:#1e4fa1;
+  margin-bottom:25px;
+}
+.leader-card{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.leader{
+  flex:1;
+  min-width:250px;
+  background:#f9fafc;
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  border:1px solid #ddd;
+}
+.leader h3{
+  font-size:22px;
+  color:#ff7a18;
+  margin-bottom:10px;
+}
+.leader p{
+  font-size:17px;
+  margin:6px 0;
+}
+
+/* Staff Tables */
+.staff-table{
+  width:90%;
+  max-width:900px;
+  margin:30px auto;
+  border-collapse:collapse;
+}
+.staff-table th,
+.staff-table td{
+  border:1px solid #bbb;
+  padding:12px;
+  text-align:center;
+}
+.staff-table th{
+  background:#e6efff;
+  color:#1e4fa1;
+  font-size:18px;
+}
+.staff-table caption{
+  caption-side:top;
+  font-size:22px;
+  font-weight:bold;
+  color:#1e4fa1;
+  margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact-box{
+  text-align:center;
+  font-size:18px;
+}
+iframe{
+  width:100%;
+  height:300px;
+  border:0;
+}
+</style>
+
+<script>
+function showPage(id){
+  let sections=document.getElementsByClassName("section");
+  for(let i=0;i<sections.length;i++){
+    sections[i].style.display="none";
+  }
+  document.getElementById(id).style.display="block";
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="top-header">
+    <img src="school-logo.png" alt="School Logo">
+    <div class="school-info">
+      <h1>Zilla Parishad High School, Hebbatam</h1>
+      <p>PM SHRI Recognized Government School</p>
+      <p>Hebbatam Village, Holagunda Mandal, Kurnool District, Andhra Pradesh</p>
+    </div>
+    <img src="pm-shri-logo.png" alt="PM SHRI Logo">
+  </div>
+
+  <div class="navbar">
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About Us</a>
+    <a onclick="showPage('academics')">Academics</a>
+    <a onclick="showPage('staff')">Staff</a>
+    <a onclick="showPage('gallery')">Gallery</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Welcome to ZPHS Hebbatam</h2>
+      <p>PM SHRI Recognized Government School</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="section">
+  <h2>About Us</h2>
+  <p style="text-align:center;">
+    Zilla Parishad High School, Hebbatam is committed to quality education,
+    discipline, and holistic development of students.
+  </p>
+</div>
+
+<!-- ACADEMICS -->
+<div id="academics" class="section">
+  <h2>Academics</h2>
+  <p style="text-align:center;">
+    We follow the SCERT Andhra Pradesh curriculum with focus on conceptual learning.
+  </p>
+</div>
+
+<!-- STAFF (UPDATED WITH LEADERSHIP) -->
+<div id="staff" class="section">
+
+  <h1 class="page-title">Teaching Staff</h1>
+
+  <div class="leadership">
+    <h2>School Leadership</h2>
+    <div class="leader-card">
+      <div class="leader">
+        <h3>Headmaster</h3>
+        <p><strong>Name:</strong> __________</p>
+        <p><strong>Qualification:</strong> M.A, B.Ed</p>
+        <p><strong>Experience:</strong> 20+ Years</p>
+      </div>
+
+      <div class="leader">
+        <h3>Deputy Headmaster</h3>
+        <p><strong>Name:</strong> __________</p>
+        <p><strong>Qualification:</strong> M.Sc, B.Ed</p>
+        <p><strong>Experience:</strong> 15+ Years</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+/* ===== STAFF PAGE ===== */
+
+.page-title{
+  text-align:center;
+  font-size:42px;
+  color:#1e4fa1;
+  margin:30px 0;
+}
+
+/* Leadership Section */
+.leadership{
+  background:#ffffff;
+  width:90%;
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.leadership h2{
+  text-align:center;
+  font-size:32px;
+  color:#1e4fa1;
+  margin-bottom:25px;
+}
+
+.leader-card{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.leader{
+  flex:1;
+  min-width:260px;
+  background:#f9fafc;
+  border-radius:14px;
+  padding:20px;
+  text-align:center;
+  border:1px solid #ddd;
+}
+
+.leader h3{
+  font-size:22px;
+  color:#ff7a18;
+  margin-bottom:10px;
+}
+
+.leader p{
+  font-size:18px;
+  margin:6px 0;
+}
+
+/* Subject Sections */
+.subject-section{
+  width:90%;
+  max-width:900px;
+  margin:40px auto;
+  text-align:center;
+}
+
+.subject-title{
+  font-size:36px;
+  font-weight:bold;
+  color:#ff7a18;
+  margin-bottom:20px;
+}
+
+/* Faculty Table */
+.faculty-table{
+  width:100%;
+  border-collapse:collapse;
+  background:#ffffff;
+}
+
+.faculty-table th,
+.faculty-table td{
+  border:2px solid #333;
+  padding:12px;
+  font-size:18px;
+}
+
+.faculty-table th{
+  color:#00a651;
+  background:#f9fff9;
+  font-weight:bold;
+}
+
+.faculty-table td{
+  color:#000;
+}
+</style>
+
+<h1 class="page-title">Teaching Staff</h1>
+
+<!-- Leadership Section -->
+<div class="leadership">
+  <h2>School Leadership</h2>
+  <div class="leader-card">
+    <div class="leader">
+      <h3>Headmaster</h3>
+      <p><strong>Name:</strong> Headmaster Name</p>
+      <p><strong>Qualification:</strong> M.A, B.Ed</p>
+      <p><strong>Experience:</strong> 20+ Years</p>
+    </div>
+
+    <div class="leader">
+      <h3>Deputy Headmaster</h3>
+      <p><strong>Name:</strong> Deputy HM Name</p>
+      <p><strong>Qualification:</strong> M.Sc, B.Ed</p>
+      <p><strong>Experience:</strong> 15+ Years</p>
+    </div>
+  </div>
+</div>
+
+<!-- Telugu -->
+<div class="subject-section">
+  <div class="subject-title">Telugu Subject</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.A, B.Ed</td></tr>
+    <tr><td>Faculty 2</td><td>M.A, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Hindi -->
+<div class="subject-section">
+  <div class="subject-title">Hindi Subject</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.A, B.Ed</td></tr>
+    <tr><td>Faculty 2</td><td>M.A, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- English -->
+<div class="subject-section">
+  <div class="subject-title">English Subject</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.A, B.Ed</td></tr>
+    <tr><td>Faculty 2</td><td>M.A, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Mathematics -->
+<div class="subject-section">
+  <div class="subject-title">Mathematics Subject</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.Sc, B.Ed</td></tr>
+    <tr><td>Faculty 2</td><td>M.Sc, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Physical Science -->
+<div class="subject-section">
+  <div class="subject-title">Physical Science</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.Sc, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Biological Science -->
+<div class="subject-section">
+  <div class="subject-title">Biological Science</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.Sc, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Social -->
+<div class="subject-section">
+  <div class="subject-title">Social Studies</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.A, B.Ed</td></tr>
+  </table>
+</div>
+
+<!-- Vocational -->
+<div class="subject-section">
+  <div class="subject-title">Vocational Education</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>Diploma / Degree</td></tr>
+  </table>
+</div>
+
+<!-- Special Education -->
+<div class="subject-section">
+  <div class="subject-title">Special Education (CWSN)</div>
+  <table class="faculty-table">
+    <tr><th>Faculty Name</th><th>Educational Qualification</th></tr>
+    <tr><td>Faculty 1</td><td>B.Ed (Special)</td></tr>
+  </table>
+</div>
+
+
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <div class="gallery-tile" onclick="showPage('independence')">Independence Day</div>
+    <div class="gallery-tile" onclick="showPage('republic')">Republic Day</div>
+    <div class="gallery-tile" onclick="showPage('sports')">Sports Day</div>
+    <div class="gallery-tile" onclick="showPage('cultural')">Cultural Events</div>
+  </div>
+</div>
+
+<div id="independence" class="section">
+  <h2>Independence Day</h2>
+  <a class="back-btn" onclick="showPage('gallery')">← Back to Gallery</a>
+</div>
+
+<div id="republic" class="section">
+  <h2>Republic Day</h2>
+  <a class="back-btn" onclick="showPage('gallery')">← Back to Gallery</a>
+</div>
+
+<div id="sports" class="section">
+  <h2>Sports Day</h2>
+  <a class="back-btn" onclick="showPage('gallery')">← Back to Gallery</a>
+</div>
+
+<div id="cultural" class="section">
+  <h2>Cultural Events</h2>
+  <a class="back-btn" onclick="showPage('gallery')">← Back to Gallery</a>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p><strong>Email:</strong> zphshebbatam2018@gmail.com</p>
+    <p><strong>Mobile:</strong> 7093599336</p>
+  </div>
+  <iframe src="https://www.google.com/maps?q=Hebbatam%20Village%20Kurnool&output=embed"></iframe>
+</div>
+
+</body>
+</html>
